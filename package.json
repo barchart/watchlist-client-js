@@ -9,8 +9,8 @@
     "url": "http://www.barchart.com"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "dev": "webpack-dev-server --hot --open",
+    "build": "webpack --config ./example/browser/webpack.config.js",
+    "dev": "webpack-dev-server --hot --open --config ./example/browser/webpack.config.js",
     "lint": "eslint --fix --config=.eslintrc './**/*.js'"
   },
   "repository": {

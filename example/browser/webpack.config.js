@@ -10,11 +10,11 @@ module.exports = {
 		'./example/browser/src/main.js'
 	],
 	output: {
-		path: path.resolve(__dirname, './example/browser'),
+		path: path.resolve(__dirname),
 		filename: 'bundle.js'
 	},
 	devServer: {
-		contentBase: path.join(__dirname, './example/browser'),
+		contentBase: path.join(__dirname),
 		open: true,
 		watchOptions: {
 			poll: true
