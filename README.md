@@ -9,11 +9,13 @@ This **JavaScript SDK** connects your applications to the _Barchart Watchlist Se
 
 ### Documentation
 
-Complete documentation for this SDK can be accessed [here](https://barchart.github.io/watchlist-client-js/).
+Complete documentation for this SDK can be accessed here:
+
+* [https://docs.barchart.com/watchlist/](https://docs.barchart.com/watchlist/)
 
 ### Example Applications
 
-Refer to the [documentation](https://barchart.github.io/watchlist-client-js/#/content/quick_start?id=sample-applications) for more information.
+Refer to the [documentation](https://docs.barchart.com/watchlist/#/content/quick_start?id=sample-applications) for more information.
 
 ### Package Managers
 
