@@ -1,6 +1,6 @@
 # Components
 
-## Responses 
+## Responses
 
 ### Unauthorized :id=responsesunauthorized
 > Authorization failure.
@@ -143,7 +143,7 @@
 
 * * *
 
-## Schemas 
+## Schemas
 
 ### watchlist :id=schemaswatchlist
 **Type**: <code>Object</code>
@@ -260,7 +260,7 @@
 
 * * *
 
-## Security 
+## Security
 
 ### JWT :id=securityjwt
 
@@ -274,4 +274,5 @@
 | Authorization | JWT | Authorization: Bearer <code>&lt;Token&gt;</code> |
 
 * * *
+
 

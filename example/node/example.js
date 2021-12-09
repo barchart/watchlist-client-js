@@ -42,6 +42,8 @@ WatchlistGateway.forTest(JwtProvider.forTest(userId, contextId))
 		return watchlistGateway.readWatchlists()
 			.then((watchlists) => {
 				console.info(`Example: Retrieved [ ${watchlists.length} ] watchlist(s) for [ ${userId} ] [ ${contextId} ].`);
+
+				console.debug(JSON.stringify(watchlists, null, 2));
 			});
 	}).then(() => {
 		const watchlist = {
@@ -56,7 +58,18 @@ WatchlistGateway.forTest(JwtProvider.forTest(userId, contextId))
 
 		return watchlistGateway.createWatchlist(watchlist)
 			.then((created) => {
-				console.info(`Example: Creating watchlist for [ ${userId} ] [ ${contextId} ] with identifier [ ${created.id} ].`);
+				console.info(`Example: Created watchlist for [ ${userId} ] [ ${contextId} ] with identifier [ ${created.id} ].`);
+
+				return created.id;
+			});
+	}).then((id) => {
+		console.info(`Example: Reading single for [ ${userId} ] [ ${contextId} ] with identifier [ ${id} ].`);
+
+		return watchlistGateway.readWatchlist(id)
+			.then((watchlist) => {
+				console.info(`Example: Read single watchlist for [ ${userId} ] [ ${contextId} ] with identifier [ ${id} ].`);
+
+				console.debug(JSON.stringify(watchlist, null, 2));
 			});
 	}).then(() => {
 		watchlistGateway.dispose();

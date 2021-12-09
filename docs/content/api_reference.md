@@ -14,7 +14,6 @@
 * [Components](#Components)
 * [Paths](#Paths)
 
-
 ## Servers {docsify-ignore}
 
 * [https://watchlist-test.aws.barchart.com/v1](https://watchlist-test.aws.barchart.com/v1)  - Hostname for test environment.
@@ -42,10 +41,12 @@
 
 * [JWT](/content/api/components?id=securityJWT)
 
+
 ## Paths {docsify-ignore}
 
 * [GET /watchlists](/content/api/paths?id=get-watchlists)
 * [POST /watchlists](/content/api/paths?id=post-watchlists)
+* [GET /watchlists/{watchlist}](/content/api/paths?id=get-watchlistswatchlist)
 * [DELETE /watchlists/{watchlist}](/content/api/paths?id=delete-watchlistswatchlist)
 * [PUT /watchlists/{watchlist}](/content/api/paths?id=put-watchlistswatchlist)
 * [PUT /watchlists/{watchlist}/preferences](/content/api/paths?id=put-watchlistswatchlistpreferences)

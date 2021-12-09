@@ -144,7 +144,7 @@ The result will be a complete ```Watchlist``` object, similar to the example bel
 }
 ```
 
-## Retrieving Your Watchlists
+## Retrieving Watchlists
 
 You can retrieve all watchlists (for the current user), as follows:
 

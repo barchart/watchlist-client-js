@@ -2,7 +2,7 @@
 
 ## GET /watchlists 
 
-> Returns watchlists owned by the current user. If the user has not watchlists, an empty array is returned.
+> Returns watchlists owned by the current user. If the user has no watchlists, an empty array is returned.
 
 **Summary**: Returns watchlists owned by the current user.
 
@@ -14,6 +14,12 @@
 | ---- | ---- | -------- | -------- | ----------- |
 | X-BARCHART-CLIENT-ID | <code>String</code> | false | false | An identifier for the connection (used to suppress WebSocket echo). |
 
+#### Query Parameters
+
+| Name | Type | Required | Nullable | Description |
+| ---- | ---- | -------- | -------- | ----------- |
+| meta | <code>String</code> | false | false | When "true" only metadata is returned (no "entries") |
+
 #### Responses
 
 **Status Code**: 200
@@ -23,6 +29,39 @@
 **Content Type**: <code>application/json</code>
 
 **Response Type:** [<code>Array&lt;watchlist&gt;</code>](/content/api/components?id=schemaswatchlist)
+
+**Example**:
+
+```
+[
+  {
+    "id": "81b2d6fa-bb7e-485b-8670-6d0c9330aa21",
+    "context": "BARCHART",
+    "name": "Watchlist name",
+    "view": "main",
+    "entries": [
+      {
+        "symbol": "TSLA",
+        "notes": {
+          "property1": null,
+          "property2": null
+        }
+      }
+    ],
+    "preferences": {
+      "sorting": {
+        "column": "symbol",
+        "desc": false
+      }
+    },
+    "user": 113692067,
+    "system": {
+      "sequence": 1,
+      "timestamp": 1580990379106
+    }
+  }
+]
+```
 
 * * *
 
@@ -95,7 +134,38 @@
 
 **Content Type**: <code>application/json</code>
 
-**Response Type:** [<code>Array&lt;watchlist&gt;</code>](/content/api/components?id=schemaswatchlist)
+**Response Type:** [<code>watchlist</code>](/content/api/components?id=schemaswatchlist)
+
+**Example**:
+
+```
+{
+  "id": "81b2d6fa-bb7e-485b-8670-6d0c9330aa21",
+  "context": "BARCHART",
+  "name": "Watchlist name",
+  "view": "main",
+  "entries": [
+    {
+      "symbol": "TSLA",
+      "notes": {
+        "property1": null,
+        "property2": null
+      }
+    }
+  ],
+  "preferences": {
+    "sorting": {
+      "column": "symbol",
+      "desc": false
+    }
+  },
+  "user": 113692067,
+  "system": {
+    "sequence": 1,
+    "timestamp": 1580990379106
+  }
+}
+```
 
 * * *
 
@@ -108,6 +178,85 @@
 * * *
 
 **Status Code**: 403 - [Forbidden](/content/api/components?id=responsesforbidden)
+
+* * *
+
+**Status Code**: 500 - [ServerError](/content/api/components?id=responsesservererror)
+
+* * *
+
+## GET /watchlists/{watchlist} 
+
+> Returns a single watchlist, owned by the current user. If the user has no watchlists, an empty array is returned.
+
+**Summary**: Reads a single watchlist, owned by the current user.
+
+**Security**: 
+[JWT](/content/api/components?id=securityJWT)
+#### Headers
+
+| Name | Type | Required | Nullable | Description |
+| ---- | ---- | -------- | -------- | ----------- |
+| X-BARCHART-CLIENT-ID | <code>String</code> | false | false | An identifier for the connection (used to suppress WebSocket echo). |
+
+#### Path Parameters
+
+| Name | Type | Required | Nullable | Description |
+| ---- | ---- | -------- | -------- | ----------- |
+| watchlist | <code>String</code> | true | false | The identifier of the watchlist. |
+
+#### Query Parameters
+
+| Name | Type | Required | Nullable | Description |
+| ---- | ---- | -------- | -------- | ----------- |
+| meta | <code>String</code> | false | false | When "true" only metadata is returned (no "entries") |
+
+#### Responses
+
+**Status Code**: 200
+
+> An array of watchlists (with one or zero items).
+
+**Content Type**: <code>application/json</code>
+
+**Response Type:** [<code>Array&lt;watchlist&gt;</code>](/content/api/components?id=schemaswatchlist)
+
+**Example**:
+
+```
+[
+  {
+    "id": "81b2d6fa-bb7e-485b-8670-6d0c9330aa21",
+    "context": "BARCHART",
+    "name": "Watchlist name",
+    "view": "main",
+    "entries": [
+      {
+        "symbol": "TSLA",
+        "notes": {
+          "property1": null,
+          "property2": null
+        }
+      }
+    ],
+    "preferences": {
+      "sorting": {
+        "column": "symbol",
+        "desc": false
+      }
+    },
+    "user": 113692067,
+    "system": {
+      "sequence": 1,
+      "timestamp": 1580990379106
+    }
+  }
+]
+```
+
+* * *
+
+**Status Code**: 401 - [Unauthorized](/content/api/components?id=responsesunauthorized)
 
 * * *
 
@@ -238,6 +387,39 @@
 
 **Response Type:** [<code>Array&lt;watchlist&gt;</code>](/content/api/components?id=schemaswatchlist)
 
+**Example**:
+
+```
+[
+  {
+    "id": "81b2d6fa-bb7e-485b-8670-6d0c9330aa21",
+    "context": "BARCHART",
+    "name": "Watchlist name",
+    "view": "main",
+    "entries": [
+      {
+        "symbol": "TSLA",
+        "notes": {
+          "property1": null,
+          "property2": null
+        }
+      }
+    ],
+    "preferences": {
+      "sorting": {
+        "column": "symbol",
+        "desc": false
+      }
+    },
+    "user": 113692067,
+    "system": {
+      "sequence": 1,
+      "timestamp": 1580990379106
+    }
+  }
+]
+```
+
 * * *
 
 **Status Code**: 400 - [BadRequest](/content/api/components?id=responsesbadrequest)
@@ -274,7 +456,7 @@
     
 **Content Type**: application/json
 
-**Type**: [<code>Array&lt;preferences&gt;</code>](/content/api/components?id=schemaspreferences)
+**Type**: [<code>preferences</code>](/content/api/components?id=schemaspreferences)
 
 **Example**:
 
@@ -296,6 +478,39 @@
 **Content Type**: <code>application/json</code>
 
 **Response Type:** [<code>Array&lt;watchlist&gt;</code>](/content/api/components?id=schemaswatchlist)
+
+**Example**:
+
+```
+[
+  {
+    "id": "81b2d6fa-bb7e-485b-8670-6d0c9330aa21",
+    "context": "BARCHART",
+    "name": "Watchlist name",
+    "view": "main",
+    "entries": [
+      {
+        "symbol": "TSLA",
+        "notes": {
+          "property1": null,
+          "property2": null
+        }
+      }
+    ],
+    "preferences": {
+      "sorting": {
+        "column": "symbol",
+        "desc": false
+      }
+    },
+    "user": 113692067,
+    "system": {
+      "sequence": 1,
+      "timestamp": 1580990379106
+    }
+  }
+]
+```
 
 * * *
 
@@ -361,6 +576,39 @@
 
 **Response Type:** [<code>Array&lt;watchlist&gt;</code>](/content/api/components?id=schemaswatchlist)
 
+**Example**:
+
+```
+[
+  {
+    "id": "81b2d6fa-bb7e-485b-8670-6d0c9330aa21",
+    "context": "BARCHART",
+    "name": "Watchlist name",
+    "view": "main",
+    "entries": [
+      {
+        "symbol": "TSLA",
+        "notes": {
+          "property1": null,
+          "property2": null
+        }
+      }
+    ],
+    "preferences": {
+      "sorting": {
+        "column": "symbol",
+        "desc": false
+      }
+    },
+    "user": 113692067,
+    "system": {
+      "sequence": 1,
+      "timestamp": 1580990379106
+    }
+  }
+]
+```
+
 * * *
 
 **Status Code**: 400 - [BadRequest](/content/api/components?id=responsesbadrequest)
@@ -409,6 +657,39 @@
 **Content Type**: <code>application/json</code>
 
 **Response Type:** [<code>Array&lt;watchlist&gt;</code>](/content/api/components?id=schemaswatchlist)
+
+**Example**:
+
+```
+[
+  {
+    "id": "81b2d6fa-bb7e-485b-8670-6d0c9330aa21",
+    "context": "BARCHART",
+    "name": "Watchlist name",
+    "view": "main",
+    "entries": [
+      {
+        "symbol": "TSLA",
+        "notes": {
+          "property1": null,
+          "property2": null
+        }
+      }
+    ],
+    "preferences": {
+      "sorting": {
+        "column": "symbol",
+        "desc": false
+      }
+    },
+    "user": 113692067,
+    "system": {
+      "sequence": 1,
+      "timestamp": 1580990379106
+    }
+  }
+]
+```
 
 * * *
 
@@ -467,7 +748,38 @@
 
 **Content Type**: <code>application/json</code>
 
-**Response Type:** [<code>Array&lt;watchlist&gt;</code>](/content/api/components?id=schemaswatchlist)
+**Response Type:** [<code>watchlist</code>](/content/api/components?id=schemaswatchlist)
+
+**Example**:
+
+```
+{
+  "id": "81b2d6fa-bb7e-485b-8670-6d0c9330aa21",
+  "context": "BARCHART",
+  "name": "Watchlist name",
+  "view": "main",
+  "entries": [
+    {
+      "symbol": "TSLA",
+      "notes": {
+        "property1": null,
+        "property2": null
+      }
+    }
+  ],
+  "preferences": {
+    "sorting": {
+      "column": "symbol",
+      "desc": false
+    }
+  },
+  "user": 113692067,
+  "system": {
+    "sequence": 1,
+    "timestamp": 1580990379106
+  }
+}
+```
 
 * * *
 

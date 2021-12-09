@@ -24,4 +24,3 @@ This library has been published as a _public_ package to NPM as [@barchart/watch
 ### License
 
 This software is provided under the MIT license.
-

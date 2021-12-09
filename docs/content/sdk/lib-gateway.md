@@ -23,7 +23,8 @@
     * _instance_
         * [.environment](#WatchlistGatewayenvironment) ⇒ <code>String</code>
         * [.connect(jwtProvider)](#WatchlistGatewayconnect) ⇒ [<code>Promise.&lt;WatchlistGateway&gt;</code>](#WatchlistGateway)
-        * [.readWatchlists()](#WatchlistGatewayreadWatchlists) ⇒ [<code>Promise.&lt;Array.&lt;Schema.Watchlist&gt;&gt;</code>](/content/sdk/lib-data?id=schemawatchlist)
+        * [.readWatchlists([meta])](#WatchlistGatewayreadWatchlists) ⇒ [<code>Promise.&lt;Array.&lt;Schema.Watchlist&gt;&gt;</code>](/content/sdk/lib-data?id=schemawatchlist)
+        * [.readWatchlist(id, [meta])](#WatchlistGatewayreadWatchlist) ⇒ [<code>Promise.&lt;Array.&lt;Schema.Watchlist&gt;&gt;</code>](/content/sdk/lib-data?id=schemawatchlist)
         * [.subscribeWatchlists(messageCallback, statusCallback, [echo])](#WatchlistGatewaysubscribeWatchlists) ⇒ <code>Promise</code>
         * [.createWatchlist(watchlist)](#WatchlistGatewaycreateWatchlist) ⇒ [<code>Promise.&lt;Schema.Watchlist&gt;</code>](/content/sdk/lib-data?id=schemawatchlist)
         * [.editWatchlist(watchlist)](#WatchlistGatewayeditWatchlist) ⇒ [<code>Promise.&lt;Schema.Watchlist&gt;</code>](/content/sdk/lib-data?id=schemawatchlist)
@@ -72,20 +73,41 @@
 
 * * *
 
-### watchlistGateway.readWatchlists() :id=watchlistgatewayreadwatchlists
+### watchlistGateway.readWatchlists([meta]) :id=watchlistgatewayreadwatchlists
 > Retrieves all watchlists for the current user.
 
 **Kind**: instance method of [<code>WatchlistGateway</code>](#WatchlistGateway)  
 **Returns**: [<code>Promise.&lt;Array.&lt;Schema.Watchlist&gt;&gt;</code>](/content/sdk/lib-data?id=schemawatchlist)  
 **Access**: public  
 
+| Param | Type | Description |
+| --- | --- | --- |
+| [meta] | <code>Boolean</code> | <p>If true, only watchlist metadata will be returned (i.e. no &quot;entries&quot; will be included).</p> |
+
+
+* * *
+
+### watchlistGateway.readWatchlist(id, [meta]) :id=watchlistgatewayreadwatchlist
+> Retrieves a single watchlist for the current user. The resulting array will
+> contain zero or one item(s).
+
+**Kind**: instance method of [<code>WatchlistGateway</code>](#WatchlistGateway)  
+**Returns**: [<code>Promise.&lt;Array.&lt;Schema.Watchlist&gt;&gt;</code>](/content/sdk/lib-data?id=schemawatchlist)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>String</code> | <p>The identifier of the watchlist to read.</p> |
+| [meta] | <code>Boolean</code> | <p>If true, only watchlist metadata will be returned (i.e. no &quot;entries&quot; will be included).</p> |
+
+
 * * *
 
 ### watchlistGateway.subscribeWatchlists(messageCallback, statusCallback, [echo]) :id=watchlistgatewaysubscribewatchlists
-> Subscribes watchlists. Only one subscription is supported. Invoking this
-> function more than once will fail. At present, a subscription requires native
-> WebSocket support (in a browser). This will be enhanced to work in Node.js
-> environments soon.
+> Subscribes to changes in the current user's watchlists. Only one subscription
+> is supported. Invoking this function more than once will fail. At present, a
+> subscription requires native WebSocket support (in a browser). This will be
+> enhanced to work in Node.js environments soon.
 
 **Kind**: instance method of [<code>WatchlistGateway</code>](#WatchlistGateway)  
 **Returns**: <code>Promise</code>  

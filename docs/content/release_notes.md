@@ -1,5 +1,19 @@
 # Release Notes
 
+## 8.5.0
+**New Features**
+
+* Added the `WatchlistGateway.readWatchlist` function, allowing consumers to read a single watchlist (given its identifier).
+* Updated the OpenAPI documentation, describing a new endpoint that allows consumers to read a single watchlist.
+* Updated the OpenAPI documentation, describing a new query parameter which can be used to read watchlist metadata only, saving some bandwidth.
+
+
+## 8.4.3
+**Technical Enhancements**
+
+* Updated `barchart/common-js` to the v4.9.0.
+* Updated `gulp` script.
+
 ## 8.4.2
 **Technical Enhancements**
 
