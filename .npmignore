@@ -1,16 +1,14 @@
-.idea
-node_modules
+.awspublish-barchart-examples
+.awspublish-docs.barchart.com
 .DS_Store
-npm-debug.log
-
-docs
-test
-example
-
 .gitignore
 .jshintrc
 gulpfile.js
 buildspec.yml
+npm-debug.log
 
-.awspublish-barchart-examples
-.awspublish-docs.barchart.com
+.idea
+docs
+node_modules
+test
+example
