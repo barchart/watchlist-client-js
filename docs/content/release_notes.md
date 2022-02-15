@@ -1,5 +1,14 @@
 # Release Notes
 
+## 8.5.1
+**Technical Enhancements**
+
+* Upgraded to the latest major version of the [`uuid`](https://www.npmjs.com/package/uuid) library.
+
+**Other**
+
+* Corrected minor grammatical errors in documentation.
+
 ## 8.5.0
 **New Features**
 
