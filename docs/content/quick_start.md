@@ -8,7 +8,7 @@ As a consumer of the Barchart Watchlist Service, you have two options:
 **If you choose to use the SDK**, you can install it from NPM (Node Package Manager), as follows:
 
 ```shell
-npm install @barchart/watchlists-client-js -S
+npm install @barchart/watchlist-client-js -S
 ```
 
 **Otherwise, if you choose not to use the SDK**, please finish reviewing this page, then refer to the [API Reference](/content/api_reference) section.
