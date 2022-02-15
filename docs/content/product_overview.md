@@ -38,11 +38,11 @@ The Barchart Watchlist Service implements a REST interface via HTTP. You may cho
 
 #### Other
 
-If JavaScript isn't suitable for your environment and you're not interested in direct access, please contact us at solutions@barchart.com or (866) 333-7587.
+If JavaScript isn't suitable for your environment, and you're not interested in direct access, please contact us at solutions@barchart.com or (866) 333-7587.
 
 ## User Privacy
 
-Privacy is important to Barchart and we do not wish to transmit or collect personally identifiable information about your users. We encourage users of the Watchlist Service to avoid sharing identifying information.
+Privacy is important to Barchart. We do not wish to transmit or collect personally identifiable information about your users. We encourage users of the Watchlist Service to avoid sharing identifying information.
 
 Here's how:
 
