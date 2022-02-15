@@ -3,12 +3,12 @@
 .DS_Store
 .gitignore
 .jshintrc
-gulpfile.js
 buildspec.yml
+gulpfile.js
 npm-debug.log
 
 .idea
 docs
+example
 node_modules
 test
-example
