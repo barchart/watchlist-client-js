@@ -11,9 +11,9 @@ You can _quickly_ build an application that allows your users to:
 
 You can combine the Watchlist Service with additional [Barchart Solutions](https://www.barchart.com/solutions) to build powerful and engaging products:
 
-* Add streaming market data quotes to watchlists.
-* Add rich charting with live updates to watchlists.
-* Add fundamental data to your watchlists.
+* Add [streaming market data](https://www.barchart.com/solutions/services/stream) quotes to watchlists.
+* Add rich [charting](https://www.barchart.com/solutions/services/digital/charting) with live updates to watchlists.
+* Add [fundamental data](https://www.barchart.com/ondemand) to your watchlists.
 * Add news articles from major news services to your watchlists.
 
 Here is a simple single-page web application:
