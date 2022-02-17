@@ -5,7 +5,7 @@
 
 ### Overview
 
-This **JavaScript SDK** connects your applications to the **Barchart Watchlist Service** — a simple tool for building and monitoring lists of investments.
+This **JavaScript SDK** connects your applications to the [**Barchart Watchlist Service**](https://www.barchart.com/solutions/services/digital/watchlist) — a simple tool for building and monitoring lists of investments.
 
 ### Documentation
 
