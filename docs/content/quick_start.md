@@ -39,7 +39,7 @@ In the _test_ environment, token generation uses these parameters:
 
 The _test_ environment is intended for evaluation and testing purposes. Since the signing secret has been publicized (above), there can be no expectation of privacy. Consequently, no sensitive information should be saved in the _test_ environment.
 
-The _production_ environment is secure. You will generate a [public/private key pair](https://en.wikipedia.org/wiki/Public-key_cryptography) and provide the public certificate to Barchart. As long as you maintain control over your private certificate, your data will be protected.
+The _production_ environment is secure. You will generate a [public/private key pair](https://en.wikipedia.org/wiki/Public-key_cryptography) and provide the public key to Barchart. As long as you maintain control over your private key, your data will be protected.
 
 Regardless of environment, the token payload must include two claims:
 
