@@ -54,7 +54,6 @@ Here is the formal definition of a watchlist preferences:
 
 * [```Schema.WatchlistPreference```](/content/sdk/lib-data?id=schemawatchlistpreferences)
 
-
 ## Examples
 
 #### Simple
