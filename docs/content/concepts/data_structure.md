@@ -50,7 +50,7 @@ Additional ad hoc properties are allowed. Property values must be either ```Stri
 
 ## Watchlist Preferences
 
-Here is the formal definition of a watchlist prefernces:
+Here is the formal definition of a watchlist preferences:
 
 * [```Schema.WatchlistPreference```](/content/sdk/lib-data?id=schemawatchlistpreferences)
 
