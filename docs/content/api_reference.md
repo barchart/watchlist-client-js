@@ -1,6 +1,6 @@
 # API Reference
 
-## Watchlist API 5.1.0 {docsify-ignore}
+## Watchlist API 5.6.1 {docsify-ignore}
     
 > Watchlist API
 
@@ -31,6 +31,10 @@
 
 ### Schemas 
 
+* [metadata](/content/api/components?id=schemasmetadata)
+* [metadata-context](/content/api/components?id=schemasmetadata-context)
+* [metadata-server](/content/api/components?id=schemasmetadata-server)
+* [metadata-user](/content/api/components?id=schemasmetadata-user)
 * [watchlist](/content/api/components?id=schemaswatchlist)
 * [preferences](/content/api/components?id=schemaspreferences)
 * [system](/content/api/components?id=schemassystem)
@@ -44,6 +48,7 @@
 
 ## Paths {docsify-ignore}
 
+* [GET /service](/content/api/paths?id=get-service)
 * [GET /watchlists](/content/api/paths?id=get-watchlists)
 * [POST /watchlists](/content/api/paths?id=post-watchlists)
 * [GET /watchlists/{watchlist}](/content/api/paths?id=get-watchlistswatchlist)

@@ -2,8 +2,8 @@
 
 As a consumer of the Barchart Watchlist Service, your software will:
 
-* Issue portfolio-related queries to the backend, and
-* Issue portfolio-related commands to the backend
+* Issue watchlist-related queries to the backend, and
+* Issue watchlist-related commands to the backend
 
 Regardless of whether you choose to consume the REST API directly, or use the SDK; data is transferred over the public Internet and stored in remote databases.
 

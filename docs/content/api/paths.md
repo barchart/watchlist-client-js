@@ -1,5 +1,52 @@
 # Paths
 
+## GET /service 
+
+> Returns the version number of the Barchart Watchlist Service and the user identifier and context of the authorized user (of the JWT).
+
+**Summary**: Returns the version and authorized user of the Barchart Watchlist Service.
+
+**Security**: 
+[JWT](/content/api/components?id=securityJWT)
+#### Responses
+
+**Status Code**: 200
+
+> An object describing the remote service and the authorized user.
+
+**Content Type**: <code>application/json</code>
+
+**Response Type:** [<code>metadata</code>](/content/api/components?id=schemasmetadata)
+
+**Example**:
+
+```
+{
+  "server": {
+    "name": "barchart/watchlist-private-api-main",
+    "description": "API for Barchart Watchlist Service",
+    "environment": "prod",
+    "semver": "5.6.1"
+  },
+  "user": {
+    "id": "me"
+  },
+  "context": {
+    "id": "BARCHART"
+  }
+}
+```
+
+* * *
+
+**Status Code**: 401 - [Unauthorized](/content/api/components?id=responsesunauthorized)
+
+* * *
+
+**Status Code**: 403 - [Forbidden](/content/api/components?id=responsesforbidden)
+
+* * *
+
 ## GET /watchlists 
 
 > Returns watchlists owned by the current user. If the user has no watchlists, an empty array is returned.

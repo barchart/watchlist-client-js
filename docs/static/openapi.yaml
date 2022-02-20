@@ -3,7 +3,7 @@ openapi: 3.0.0
 info:
   title: Watchlist API
   description: Watchlist API
-  version: 5.1.0
+  version: 5.6.1
 
 components:
   securitySchemes:
@@ -117,6 +117,46 @@ components:
                   items: {}
 
   schemas:
+    metadata:
+      type: object
+      properties:
+        server:
+          $ref: '#/components/schemas/metadata-server'
+        user:
+          $ref: '#/components/schemas/metadata-user'
+        context:
+          $ref: '#/components/schemas/metadata-context'
+
+    metadata-context:
+      type: object
+      properties:
+        id:
+          type: string
+          example: BARCHART
+
+    metadata-server:
+      type: object
+      properties:
+        name:
+          type: string
+          example: barchart/watchlist-private-api-main
+        description:
+          type: string
+          example: API for Barchart Watchlist Service
+        environment:
+          type: string
+          example: prod
+        semver:
+          type: string
+          example: 5.6.1
+
+    metadata-user:
+      type: object
+      properties:
+        id:
+          type: string
+          example: me
+
     watchlist:
       type: object
       properties:
@@ -190,9 +230,29 @@ servers:
 
 tags:
   - name: Watchlist
-  - name: Symbols
+  - name: Service
 
 paths:
+  /service:
+    get:
+      summary: Returns the version and authorized user of the Barchart Watchlist Service.
+      description: Returns the version number of the Barchart Watchlist Service and the user identifier and context of the authorized user (of the JWT).
+      tags:
+        - Service
+      security:
+        - JWT: []
+      responses:
+        '200':
+          description: An object describing the remote service and the authorized user.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/metadata'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
   /watchlists:
     get:
       summary: Returns watchlists owned by the current user.

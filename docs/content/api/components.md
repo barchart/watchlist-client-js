@@ -145,6 +145,93 @@
 
 ## Schemas
 
+### metadata :id=schemasmetadata
+**Type**: <code>Object</code>
+    
+| Name | Type | Required | Nullable | Description |
+| ---- | ---- | -------- | -------- | ----------- |
+| server | [<code>metadata-server</code>](#schemasmetadata-server) |  | false |  |
+| user | [<code>metadata-user</code>](#schemasmetadata-user) |  | false |  |
+| context | [<code>metadata-context</code>](#schemasmetadata-context) |  | false |  |
+
+**Example**:
+
+```json
+{
+  "server": {
+    "name": "barchart/watchlist-private-api-main",
+    "description": "API for Barchart Watchlist Service",
+    "environment": "prod",
+    "semver": "5.6.1"
+  },
+  "user": {
+    "id": "me"
+  },
+  "context": {
+    "id": "BARCHART"
+  }
+}
+```
+
+* * *
+
+### metadata-context :id=schemasmetadata-context
+**Type**: <code>Object</code>
+    
+| Name | Type | Required | Nullable | Description |
+| ---- | ---- | -------- | -------- | ----------- |
+| id | <code>String</code> | false | false |  |
+
+**Example**:
+
+```json
+{
+  "id": "BARCHART"
+}
+```
+
+* * *
+
+### metadata-server :id=schemasmetadata-server
+**Type**: <code>Object</code>
+    
+| Name | Type | Required | Nullable | Description |
+| ---- | ---- | -------- | -------- | ----------- |
+| name | <code>String</code> | false | false |  |
+| description | <code>String</code> | false | false |  |
+| environment | <code>String</code> | false | false |  |
+| semver | <code>String</code> | false | false |  |
+
+**Example**:
+
+```json
+{
+  "name": "barchart/watchlist-private-api-main",
+  "description": "API for Barchart Watchlist Service",
+  "environment": "prod",
+  "semver": "5.6.1"
+}
+```
+
+* * *
+
+### metadata-user :id=schemasmetadata-user
+**Type**: <code>Object</code>
+    
+| Name | Type | Required | Nullable | Description |
+| ---- | ---- | -------- | -------- | ----------- |
+| id | <code>String</code> | false | false |  |
+
+**Example**:
+
+```json
+{
+  "id": "me"
+}
+```
+
+* * *
+
 ### watchlist :id=schemaswatchlist
 **Type**: <code>Object</code>
     
