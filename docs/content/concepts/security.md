@@ -94,6 +94,43 @@ const secret = 'public-knowledge-1234567890';
 const token = jwt.sign(claims, secret, { algorithm: 'HS256', expiresIn: '2 days' });
 ```
 
+#### Testing Your Tokens
+
+Once you are able to generate JWT, you can test them by invoking the [`/service`](/content/api/paths?id=get-service) endpoint of the REST API, adding a token the request's `Authroization` header, as follows:
+
+```shell
+curl 'https://watchlist-test.aws.barchart.com/v1/service' \
+  -X 'GET' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjb250ZXh0SWQiOiJiYXJjaGFydCIsInVzZXJJZCI6Im1lIiwianRpIjoiOThjMjdjNmMtN2RlNS00MTQ4LTg4ZDgtNzgxN2M5M2E1OGE4IiwiaWF0IjoxNTk0MDcwNzgyLCJleHAiOjE1OTQwNzQzODJ9.Pm8O_SG-KBqj_BibPdKIwTIj4zmbIJ9v5MqJbqdgBfw'
+```
+
+If you receive an `HTTP 200` response, like the following, that proves the token is valid for the environment.
+
+```json
+{
+  "server": {
+	"name":"@barchart/watchlist-private-api-main",
+	"description":"API for Barchart Watchlist Service", 
+	"environment":"test",
+	"semver":"5.6.1"
+  },
+  "user": {
+	"id":"me",
+	"permissions":""
+  },
+  "context": {
+	"id":"BARCHART"
+  }
+}
+```
+
+Otherwise, if you receive an `HTTP 401` or `HTTP 403` response, there is a problem with your token. To troubleshoot:
+
+* make sure you're using the correct hostname for the environment (e.g. production or test),
+* make sure you're using the correct signing algorithm and secret for the environment, and finally
+* make sure the token's claims conform to the expected schema.
+
 ## Token Usage
 
 ### Using the SDK

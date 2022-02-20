@@ -1,9 +1,10 @@
 # Release Notes
 
 ## 8.5.2
-**Other**
+**No Functional Changes**
 
-* Updated the OpenAPI documentation, adding a description for the `/service` endpoint.
+* Updated the OpenAPI file, adding a description for the `/service` endpoint.
+* Updated documentation, adding a `Testing Your Tokens` section to the `Key Concepts > Security` page.
 
 ## 8.5.1
 **Technical Enhancements**
