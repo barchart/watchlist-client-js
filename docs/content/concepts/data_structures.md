@@ -1,6 +1,6 @@
 ## Synopsis
 
-The Barchart Watchlist Service communicates using [JSON](https://en.wikipedia.org/wiki/JSON) data. You send JSON-formatted objects to the backend. You receive JSON-formatted in response. **This section describes the schema for these JSON objects.**
+The Barchart Watchlist Service communicates using [JSON](https://en.wikipedia.org/wiki/JSON) data. You send JSON-formatted objects to the backend. You receive JSON-formatted data in response. **This section describes the schema for these JSON objects.**
 
 Here is the object graph for a watchlist:
 
