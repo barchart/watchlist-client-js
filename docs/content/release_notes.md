@@ -1,5 +1,10 @@
 # Release Notes
 
+## 8.5.2
+**Other**
+
+* Updated the OpenAPI documentation, adding a description for the `/service` endpoint.
+
 ## 8.5.1
 **Technical Enhancements**
 

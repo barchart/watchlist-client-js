@@ -3,7 +3,6 @@
 * Key Concepts
     * [Security](/content/concepts/security)
     * [Data Structures](/content/concepts/data_structure)
-* [Release Notes](/content/release_notes)
 <!-- sdk_open -->
 * [SDK Reference](/content/sdk_reference)
 <!-- sdk_close -->
@@ -12,3 +11,4 @@
 	* [Components](/content/api/components)
 	* [Paths](/content/api/paths)
 <!-- api_close -->
+* [Release Notes](/content/release_notes)
