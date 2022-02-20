@@ -11,13 +11,13 @@ As a consumer of the Barchart Watchlist Service, you have two options:
 npm install @barchart/watchlist-client-js -S
 ```
 
-**Otherwise, if you choose not to use the SDK**, please finish reviewing this page, then refer to the [API Reference](/content/api_reference) section.
+**If you'd prefer to use the REST API directly**, please finish reviewing this page, then refer to the [API Reference](/content/api_reference) section.
 
 ## Environments
 
 Two instances of the Barchart Watchlist Service are always running:
 
-#### Demo
+#### Test
 
 The _test_ environment can be used for integration and evaluation purposes. It can be accessed at ```watchlist-test.aws.barchart.com``` and has two significant limitations:
 
@@ -37,7 +37,7 @@ In the _test_ environment, token generation uses these parameters:
 * Tokens are signed with the ```HMAC-SHA256``` (aka ```HS256```) algorithm
 * Tokens are signed with the following secret: ```"public-knowledge-1234567890"```
 
-The _test_ environment is intended for evaluation and testing purposes. Since the signing secret has been publicized (above), there can be no expectation of privacy. Consequently, no sensitive information should be saved in the _test_ environment.
+The _test_ environment is intended for evaluation and testing purposes. Since the signing secret has been publicized (see above), there can be no expectation of privacy. Consequently, no sensitive information should be saved in the _test_ environment.
 
 The _production_ environment is secure. You will generate a [public/private key pair](https://en.wikipedia.org/wiki/Public-key_cryptography) and provide the public key to Barchart. As long as you maintain control over your private key, your data will be protected.
 
@@ -50,7 +50,7 @@ Regardless of environment, the token payload must include two claims:
 
 #### Using the SDK
 
-Before you can do anything meaningful with the SDK, you must obtain an instance of the ```WatchlistGateway``` class. Use one of the static factory functions and provide a strategy for generating JSON Web Tokens, as follows:
+Before you can do anything meaningful with the SDK, you must obtain an instance of the [```WatchlistGateway```](/content/sdk/lib-gateway?id=watchlistgateway) class. Use one of the static factory functions and provide a strategy for generating JSON Web Tokens, as follows:
 
 ```js
 const WatchlistGateway = require('@barchart/watchlist-client-js/lib/gateway/WatchlistGateway'),
@@ -67,11 +67,11 @@ WatchlistGateway.forTest(JwtProvider.forTest(myUserId, myContextId))
 
 #### Using the API
 
-If you choose to work directly with the REST interface, you won't need to perform an explicit "connect" action. Each HTTP request is independently authorized by the backend. You simply need to include a JWT token in the _Authorization_ header of each request.
+If you choose to work directly with the REST interface, you won't need to perform an explicit "connect" action. Each HTTP request is independently authorized by the backend. You simply need to include a JWT in the _Authorization_ header of each request.
 
 ## Constructing a Watchlist
 
-First, we must construct an object which conforms to the [```Watchlist```](content/sdk/lib-data?id=schemawatchlist) schema. Here is a simple example:
+First, we must construct an object which conforms to the [```Watchlist```](/content/sdk/lib-data?id=schemawatchlist) schema. Here is a simple example:
 
 ```json
 {
@@ -168,7 +168,7 @@ curl 'https://watchlist-test.aws.barchart.com/v1/watchlists' \
 
 ## Adding a Symbol
 
-After a ```Watchlist``` has been saved, additional symbols can be added. Each symbol is wrapped in a [```WatchlistEntry```](content/sdk/lib-data?id=schemawatchlistentry) object. Here is the simplest example:
+After a ```Watchlist``` has been saved, additional symbols can be added. Each symbol is wrapped in a [```WatchlistEntry```](/content/sdk/lib-data?id=schemawatchlistentry) object. Here is the simplest example:
 
 ```json
 {

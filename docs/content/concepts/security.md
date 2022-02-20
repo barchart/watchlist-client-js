@@ -2,9 +2,12 @@
 
 As a consumer of the Barchart Watchlist Service, your software will:
 
-* Create and curate watchlists
+* Issue portfolio-related queries to the backend, and
+* Issue portfolio-related commands to the backend
 
-The Barchart Watchlist Service uses commercially reasonable procedures to ensure your data is safe. All data is encrypted before transmission (using HTTP over SSL/TLS). Furthermore, each interaction is authorized using a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token).
+Regardless of whether you choose to consume the REST API directly, or use the SDK; data is transferred over the public Internet and stored in remote databases.
+
+**The Barchart Watchlist Service uses commercially reasonable procedures to ensure your data is safe.** All data is encrypted before transmission (using HTTP over SSL/TLS). Furthermore, each interaction is authorized using a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token).
 
 ## Token Generation
 
