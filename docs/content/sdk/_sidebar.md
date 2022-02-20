@@ -2,7 +2,7 @@
 * [Quick Start](/content/quick_start)
 * Key Concepts
     * [Security](/content/concepts/security)
-    * [Data Structures](/content/concepts/data_structure)
+    * [Data Structures](/content/concepts/data_structures)
 <!-- sdk_open -->
 * [SDK Reference](/content/sdk_reference)
 	* [lib/data](/content/sdk/lib-data)
