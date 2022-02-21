@@ -2,7 +2,7 @@
 
 You can _quickly_ build an application that allows your users to:
 
-* Create and name new _watchlists_
+* Create and name new watchlists
 * Add investments to watchlists
 * Remove investments from watchlists
 * Delete watchlists
