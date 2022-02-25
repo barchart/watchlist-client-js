@@ -6,6 +6,7 @@
 buildspec.yml
 gulpfile.js
 npm-debug.log
+openapi.yaml
 
 .idea
 docs
