@@ -20,6 +20,14 @@ Here is a simple single-page web application:
 
 ![Web Application](images/watchlist_ui_web.png)
 
+## Demo Application
+
+You can access a demo application, built with the Watchlist Service and other, related Barchart services at:
+
+> https://demo.barchart.com/watchlist
+
+Obviously, this demo application represents only _one possible UI concept_ for watchlist applications. Use the Barchart Watchlist Service as the foundation for your tools and the possibilities for interactive and engaging user experiences are endless. 
+
 ## Supported Environments
 
 This SDK provides a convenient way to interact with the Barchart Watchlist Service. We recommend using it in JavaScript environments.
