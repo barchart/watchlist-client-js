@@ -141,10 +141,15 @@ First, write a function that signs and returns a token. The function must confor
 function getJwtToken() {
 	return Promise.resolve()
 		.then(() => {
+			let token;
+			
 			// Generate a signed token and return it. You'll probably want to delegate
 			// the actual work to a remote service. This helps to ensure your JWT signing
 			// secret cannot be compromised.
 
+			// Never include your signing secret in code that runs in a web browser.
+			// See the "Best Practices" section (below).
+			
 			return token;
 		});
 }
@@ -153,7 +158,6 @@ function getJwtToken() {
 Next, instantiate a [```JwtProvider```](/content/sdk/lib-security?id=jwtprovider) and pass it to one of the environment-specific factory functions:
 
 * ```WatchlistGateway.forTest```
-* ```WatchlistGateway.forStaging```
 * ```WatchlistGateway.forProduction```
 
 For example:
