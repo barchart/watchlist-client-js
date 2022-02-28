@@ -34,7 +34,7 @@ The token payload must include the following claims:
 }
 ```
 
-A **context** is a container for users. In other words, your "context" is your organization. You can your "context" as follows:
+A **context** is a container for users. In other words, your "context" is your organization. You can conceptualize your "context" as follows:
 
 ```text
 ├── context
