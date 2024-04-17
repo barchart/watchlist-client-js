@@ -32,7 +32,7 @@
 
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
-| value | <code>Object</code> |  | false |  |
+| value | <code>Object</code> | false | false |  |
 | value.code | <code>String</code> | false | false |  |
 | value.message | <code>String</code> | false | false |  |
 | children | <code>Array</code> | false | false |  |
@@ -62,7 +62,7 @@
 
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
-| value | <code>Object</code> |  | false |  |
+| value | <code>Object</code> | false | false |  |
 | value.code | <code>String</code> | false | false |  |
 | value.message | <code>String</code> | false | false |  |
 | children | <code>Array</code> | false | false |  |
@@ -92,7 +92,7 @@
 
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
-| value | <code>Object</code> |  | false |  |
+| value | <code>Object</code> | false | false |  |
 | value.code | <code>String</code> | false | false |  |
 | value.message | <code>String</code> | false | false |  |
 | children | <code>Array</code> | false | false |  |
@@ -122,7 +122,7 @@
 
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
-| value | <code>Object</code> |  | false |  |
+| value | <code>Object</code> | false | false |  |
 | value.code | <code>String</code> | false | false |  |
 | value.message | <code>String</code> | false | false |  |
 | children | <code>Array</code> | false | false |  |
@@ -147,12 +147,13 @@
 
 ### metadata :id=schemasmetadata
 **Type**: <code>Object</code>
-    
+
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
-| server | [<code>metadata-server</code>](#schemasmetadata-server) |  | false |  |
-| user | [<code>metadata-user</code>](#schemasmetadata-user) |  | false |  |
-| context | [<code>metadata-context</code>](#schemasmetadata-context) |  | false |  |
+| server | [<code>metadata-server</code>](#schemasmetadata-server) | false | false |  |
+| user | [<code>metadata-user</code>](#schemasmetadata-user) | false | false |  |
+| context | [<code>metadata-context</code>](#schemasmetadata-context) | false | false |  |
+
 
 **Example**:
 
@@ -177,10 +178,11 @@
 
 ### metadata-context :id=schemasmetadata-context
 **Type**: <code>Object</code>
-    
+
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
 | id | <code>String</code> | false | false |  |
+
 
 **Example**:
 
@@ -194,13 +196,14 @@
 
 ### metadata-server :id=schemasmetadata-server
 **Type**: <code>Object</code>
-    
+
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
 | name | <code>String</code> | false | false |  |
 | description | <code>String</code> | false | false |  |
 | environment | <code>String</code> | false | false |  |
 | semver | <code>String</code> | false | false |  |
+
 
 **Example**:
 
@@ -217,10 +220,11 @@
 
 ### metadata-user :id=schemasmetadata-user
 **Type**: <code>Object</code>
-    
+
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
 | id | <code>String</code> | false | false |  |
+
 
 **Example**:
 
@@ -234,17 +238,18 @@
 
 ### watchlist :id=schemaswatchlist
 **Type**: <code>Object</code>
-    
+
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
 | id | <code>String</code> | false | false |  |
 | context | <code>String</code> | false | false |  |
 | name | <code>String</code> | false | false |  |
 | view | <code>String</code> | false | false |  |
-| entries | [<code>entries</code>](#schemasentries) |  | false |  |
-| preferences | [<code>preferences</code>](#schemaspreferences) |  | false |  |
+| entries | [<code>entries</code>](#schemasentries) | false | false |  |
+| preferences | [<code>preferences</code>](#schemaspreferences) | false | false |  |
 | user | <code>String</code> | false | false |  |
-| system | [<code>system</code>](#schemassystem) |  | false |  |
+| system | [<code>system</code>](#schemassystem) | false | false |  |
+
 
 **Example**:
 
@@ -281,12 +286,13 @@
 
 ### preferences :id=schemaspreferences
 **Type**: <code>Object</code>
-    
+
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
-| sorting | <code>Object</code> |  | false |  |
+| sorting | <code>Object</code> | false | false |  |
 | sorting.column | <code>String</code> | false | false |  |
 | sorting.desc | <code>Boolean</code> | false | false |  |
+
 
 **Example**:
 
@@ -303,11 +309,12 @@
 
 ### system :id=schemassystem
 **Type**: <code>Object</code>
-    
+
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
 | sequence | <code>Integer</code> | false | false |  |
 | timestamp | <code>String</code> | false | false |  |
+
 
 **Example**:
 
@@ -323,15 +330,30 @@
 ### entries :id=schemasentries
 **Type**: [<code>Array&lt;entry&gt;</code>](#schemasentry)
 
+**Example**:
+
+```json
+[
+  {
+    "symbol": "TSLA",
+    "notes": {
+      "property1": null,
+      "property2": null
+    }
+  }
+]
+```
+
 * * *
 
 ### entry :id=schemasentry
 **Type**: <code>Object</code>
-    
+
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
 | symbol | <code>String</code> | false | false |  |
 | notes | <code>Object</code> | false | false |  |
+
 
 **Example**:
 
@@ -354,7 +376,7 @@
 >
 
 **Type**: http bearer
-    
+
 #### Headers
 | Name | Format | Example |
 | ---- | ------ | ------- |

@@ -135,7 +135,7 @@
 | X-BARCHART-CLIENT-ID | <code>String</code> | false | false | An identifier for the connection (used to suppress WebSocket echo). |
 
 #### Request Body
-    
+
 **Content Type**: application/json
 
 **Type**: <code>Object</code>
@@ -146,7 +146,7 @@
 | context | <code>String</code> | true | false |  |
 | view | <code>String</code> | false | false |  |
 | entries | [<code>entries</code>](/content/api/components?id=schemasentries) | true | false |  |
-| preferences | [<code>preferences</code>](/content/api/components?id=schemaspreferences) |  | false |  |
+| preferences | [<code>preferences</code>](/content/api/components?id=schemaspreferences) | false | false |  |
 
 **Example**:
 
@@ -388,7 +388,7 @@
 | watchlist | <code>String</code> | true | false | The identifier of the watchlist. |
 
 #### Request Body
-    
+
 **Content Type**: application/json
 
 **Type**: <code>Object</code>
@@ -398,7 +398,7 @@
 | name | <code>String</code> | true | false |  |
 | view | <code>String</code> | false | false |  |
 | entries | [<code>entries</code>](/content/api/components?id=schemasentries) | true | false |  |
-| preferences | [<code>preferences</code>](/content/api/components?id=schemaspreferences) |  | false |  |
+| preferences | [<code>preferences</code>](/content/api/components?id=schemaspreferences) | false | false |  |
 
 **Example**:
 
@@ -500,7 +500,7 @@
 | watchlist | <code>String</code> | true | false | The identifier of the watchlist. |
 
 #### Request Body
-    
+
 **Content Type**: application/json
 
 **Type**: [<code>preferences</code>](/content/api/components?id=schemaspreferences)
@@ -588,14 +588,14 @@
 | watchlist | <code>String</code> | true | false | The identifier of the watchlist. |
 
 #### Request Body
-    
+
 **Content Type**: application/json
 
 **Type**: <code>Object</code>
 
 | Name | Type | Required | Nullable | Description |
 | ---- | ---- | -------- | -------- | ----------- |
-| entry | [<code>entry</code>](/content/api/components?id=schemasentry) |  | false |  |
+| entry | [<code>entry</code>](/content/api/components?id=schemasentry) | false | false |  |
 | index | <code>Integer</code> | false | false | The index at which the symbol will be inserted |
 
 **Example**:
@@ -768,7 +768,7 @@
 | symbol | <code>String</code> | true | false | The symbol to move. |
 
 #### Request Body
-    
+
 **Content Type**: application/json
 
 **Type**: <code>Object</code>

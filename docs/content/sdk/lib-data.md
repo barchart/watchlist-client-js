@@ -41,7 +41,7 @@
 
 | Name | Type | Description |
 | --- | --- | --- |
-| symbol | <code>String</code> | <p>The unique identifier of the</p> |
+| symbol | <code>String</code> | <p>The unique identifier of the instrument (item).</p> |
 
 
 * * *

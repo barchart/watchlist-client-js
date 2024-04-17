@@ -1,5 +1,15 @@
 # Release Notes
 
+## 8.5.3
+**Bug Fixes**
+
+* Corrected `WatchlistGateway.addSymbol` function — the `index` parameter is now obeyed.
+
+**Technical Enhancements**
+
+* Updated the [`uuid`](https://github.com/uuidjs/uuid) package to the next major version.
+* Updated AWS CodeBuild integration to use Node.js version 20.
+
 ## 8.5.2
 **No Functional Changes**
 
@@ -102,7 +112,7 @@
 ## 7.0.0
 **Breaking Changes**
 
-* The mechanism for passing JSON Web Tokens to the ```WatchlistGateway``` has changed. Consumers are now required to provide ```JwtProvider``` instances instead of a ```RequestInterceptor``` instances. Here are the specifics:
+* The mechanism for passing JSON Web Tokens to the ```WatchlistGateway``` has changed. Consumers are now required to provide ```JwtProvider``` instances instead of ```RequestInterceptor``` instances. Here are the specifics:
   * The ```RequestInterceptor``` argument was replaced with a ```JwtProvider``` argument on static factory functions (e.g. ```WatchlistGateway.forProduction```).
   * The ```RequestInterceptor``` argument was removed from the ```WatchlistGateway``` constructor.
   * The ```WatchlistGateway.start``` function was renamed to ```WatchlistGateway.connect``` and now has a ```JwtProvider``` argument.
